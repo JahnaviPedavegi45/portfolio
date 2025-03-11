@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+
+.cursive-font {
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+    font-size: 20px; /* Adjust as needed */
+    line-height: 1.6;
+    color: #f5f5f5;
+    font-weight: 500; 
+    
+}
+
+
+body {
+    width: 100%;
+    background: linear-gradient(to right, rgb(2, 11, 31), rgb(1, 4, 46));
+    color:  rgb(38, 192, 226);
+}
+
+/* Navbar Styling */
+nav {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 15px 0;
+    transition: top 0.5s ease-in-out;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    position: relative;
+}
+
+.links {
+    display: flex;
+    gap: 2rem;
+}
+
+.links a {
+    color:  rgb(38, 192, 226);
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+
+.links a:hover {
+    color: rgb(245, 247, 248);
+}
+
+/* Hamburger Icon */
+.hamburg {
+    font-size: 2rem;
+    cursor: pointer;
+    color: rgb(70, 177, 216);
+    display: none;
+}
+@media (max-width: 768px) {
+    .links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    .links.active {
+        display: flex; 
+        flex-direction: column;
+    }
+
+    .links a {
+        display: block;
+        padding: 15px;
+        width: 100%;
+        text-align: center;
+        font-size: 1.2rem;
+        color: rgb(241, 236, 241);
+        text-decoration: none;
+    }
+
+    .links a:hover {
+        background: rgb(38, 192, 226); 
+        color: rgb(2, 8, 22);
+    }
+
+    .hamburg {
+        display: block;
+        font-size: 2rem;
+        cursor: pointer;
+        color: rgb(69, 177, 227);
+        position: absolute;
+        right: 20px;
+        top: 15px;
+    }
+}
+
+
+
+.links.active a[href="#contact"] {
+    display: block;
+}
+
+/* Sections Styling */
+section {
+    padding: 100px 50px;
+    text-align: center;
+    margin-top: 80px;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.center-image {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid rgb(38, 192, 226);
+    box-shadow: 0 0 15px rgb(38, 192, 226);
+}
+
+.center-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Skills Section */
+#skills ul {
+    list-style: none;
+    padding: 0;
+}
+
+#skills ul li {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#skills ul li i {
+    color: rgb(253, 248, 252);
+    margin-right: 10px;
+    font-size: 1.5rem;
+}
+
+/* Certifications Section */
+#certifications ul {
+    list-style: none;
+    padding: 0;
+}
+
+#certifications ul li {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+#certifications ul li a {
+    text-decoration: none;
+    color:  rgb(38, 192, 226);
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+#certifications ul li a:hover {
+    color: rgb(254, 247, 252);
+    text-decoration: underline;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px; 
+    margin-top: 5px; 
+}
+
+/* Reduce Section Gaps */
+section {
+    padding: 40px 35px; 
+    text-align: center;
+    margin-top: 20px; 
+}
+
+.social-links a, .contact-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: 0.3s;
+    box-shadow: none;
+    border: none;
+    background: none;
+    width: auto;
+    height: auto;
+    gap: 5px; 
+    font-size: 1rem;
+    color:  rgb(96, 190, 231);
+}
+
+.social-links a i, .contact-links a i {
+    font-size: 1.2rem; 
+    background-color: transparent;
+    color: rgb(243, 237, 241);
+    border-radius: 50%;
+    padding: 3px; 
+    transition: 0.3s;
+}
+
+.social-links a:hover, .contact-links a:hover {
+    color:rgb(228, 233, 234);
+    transform: scale(1.03);
+}
+
+.social-links a:hover i, .contact-links a:hover i {
+    color:  rgb(63, 182, 206);
+    transform: scale(1.08);
+}
+
+.links a {
+    font-size: 0.9rem; 
+    padding: 3px 8px; 
+}
+
+.nav-container {
+    padding: 0 25px; 
+}
+
+.links {
+    gap: 1rem; 
+}
+
+
+@keyframes words {
+    0%, 33.33% {
+        content: "Developer";
+    }
+    33.34%, 66.66% {
+        content: "Aspiring Data Scientist";
+    }
+    66.67%, 100% {
+        content: "Tech Enthusiast";
+    }
+}
+
+.dynamic-text::before {
+    content: "Developer";
+    animation: words 6s infinite;
+    color: rgb(38, 192, 226);
+    text-shadow: 0 0 5px rgb(2, 8, 83);
+}
+
+/* Animated Text Above Image */
+.animated-text {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color:  rgb(231, 225, 230);
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.animated-text span {
+    font-size: 1.2rem;
+    font-weight: normal;
+    color: rgb(38, 192, 226);
+}
+.logo {
+    color: rgb(38, 192, 226); 
+    font-size: 1.5rem; 
+    font-weight:lighter;
+    text-shadow: 0 0 5px rgba(38, 192, 226, 0.5); 
+}
+#about {
+    margin-bottom: 10px; 
+    padding-bottom: 10px; 
+}
+
+#skills {
+    margin-top: 10px; 
+}
+#skills {
+    margin-bottom: 10px;
+    padding-bottom: 10px; 
+}
+
+#certifications {
+    margin-top: 10px; 
+}
+#skills {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+#certifications {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+#contact {
+    margin-top: 10px; 
+}
+section h2 {
+    color: rgb(242, 232, 241); 
+    text-transform:none; 
+    font-size: 24px; 
+    font-weight: bold; 
+    
+}
